@@ -4,3 +4,14 @@ export interface NavigationProps {
   linkStyles: string;
   underlineStyles?: string;
 }
+
+// Socials
+export interface SocialIconProps {
+  path: string;
+  name: JSX.Element;
+}
+
+export interface SocialProps {
+  containerStyles: string;
+  iconsStyles: string;
+}

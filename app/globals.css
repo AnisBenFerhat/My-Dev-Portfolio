@@ -11,6 +11,8 @@
     --foreground-muted: #4c4c4c;
 
     --accent: #3e6856;
+
+    --secondary-font: 'Alegreya Sans', sans-serif;
   }
 
   .dark {
@@ -25,11 +27,14 @@
 }
 
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-1px];
-  font-family: var(--title-font);
+  @apply text-6xl md:text-7xl xl:text-[105px] xl:leading-[100px] tracking-[2px] xl:tracking-[-1px] font-bold;
+  font-family: var(--secondary-font);
 }
 
 .h2 {
   @apply text-4xl;
-  font-family: var(--title-font);
+}
+
+.subtitle {
+  @apply text-foreground-70/80 mb-8;
 }
