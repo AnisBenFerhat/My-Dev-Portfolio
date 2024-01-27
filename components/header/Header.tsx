@@ -1,5 +1,6 @@
 'use client';
 
+import MobileNavigation from '../navigation/MobileNavigation';
 import Navigation from '../navigation/Navigation';
 import Logo from '../ui/Logo';
 
@@ -15,7 +16,9 @@ const Header = () => {
               linkStyles='relative hover:text-primary transition-all'
               underlineStyles='absolute left-0 top-full h-[2px] w-full bg-secondary-60'
             />
-            <div className='xl:hidden'>Mobile Navigation</div>
+            <div className='xl:hidden'>
+              <MobileNavigation />
+            </div>
           </div>
         </div>
       </div>

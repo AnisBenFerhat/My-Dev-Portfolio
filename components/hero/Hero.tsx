@@ -32,7 +32,7 @@ const Hero = () => {
                   Contact me <BsFillSendFill />
                 </Button>
               </Link>
-              <Button variant='outline' className='gap-x-2 mr-2'>
+              <Button variant='outline' className='gap-x-2 '>
                 Download CV <RiDownloadFill size={18} color='#395591' />
               </Button>
               <div className='flex justify-center items-center '>
