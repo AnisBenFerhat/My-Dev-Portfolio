@@ -27,6 +27,7 @@ const Navigation = ({ containerStyles, linkStyles, underlineStyles }: Navigation
                 transition={{ type: 'tween' }}
                 layoutId='underline'
                 className={`${underlineStyles}`}
+                key={link.name}
               />
             )}
             {link.name}
