@@ -38,3 +38,12 @@
 .subtitle {
   @apply text-foreground-70/80 mb-8;
 }
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3;
+  font-family: var(--secondary-font);
+}
+
+.tags {
+  @apply bg-secondary-60/80 text-primary-10 px-3 py-1 rounded-full;
+}

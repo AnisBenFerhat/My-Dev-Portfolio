@@ -15,3 +15,12 @@ export interface SocialProps {
   containerStyles: string;
   iconsStyles: string;
 }
+
+// About
+
+// Tech Icon Props
+export interface TechIconProps {
+  category: string;
+  name: string;
+  path: string;
+}
