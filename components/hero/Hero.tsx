@@ -43,7 +43,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className='hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-pulse xl:animate-bounce'>
+          <div className='hidden md:flex absolute left-2/4 bottom-44 xl:bottom-20 animate-pulse xl:animate-bounce'>
             <BsChevronCompactDown className='text-3xl text-secondary-80' />
           </div>
         </div>
