@@ -40,16 +40,13 @@ const AboutAccordion = () => {
         <AccordionItem value='soft-skills'>
           <AccordionTrigger>Soft Skills</AccordionTrigger>
           <AccordionContent>
-            <div className='flex flex-wrap'>
-              {softSkills.map((softSkill: SoftSkillProps, index) => (
-                <span
-                  key={index}
-                  className=' grid grid-cols-2 xl:grid-cols-3 py-1 px-2 rounded-full mb-2 bg-secondary-50/80 text-white mr-2'
-                >
+            <ul className='grid xl:grid-cols-3 md:grid-cols-2 gap-2 list-none p-0'>
+              {softSkills.map((softSkill: SoftSkillProps) => (
+                <li key={softSkill} className='py-1 px-2 rounded-full mb-2'>
                   {softSkill}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
