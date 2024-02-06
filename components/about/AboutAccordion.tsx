@@ -44,7 +44,7 @@ const AboutAccordion = () => {
               {softSkills.map((softSkill: SoftSkillProps, index) => (
                 <span
                   key={index}
-                  className='grid xl:grid-cols-3 shrink-0 py-1 px-2 rounded-full mb-2 bg-secondary-60/80 text-white mr-2'
+                  className='grid xl:grid-cols-3 shrink-0 py-1 px-2 rounded-full mb-2 bg-secondary-10/50 text-foreground-60 mr-2'
                 >
                   {softSkill}
                 </span>
