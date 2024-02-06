@@ -51,3 +51,19 @@ export interface LearningIconProps {
   'web development': Record<string, string>;
   other: Record<string, string>;
 }
+
+// Experience & Education
+
+export interface ExperienceData {
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+  description?: string;
+}
+
+export interface EducationData {
+  title: string;
+  duration: string;
+  school: string;
+}

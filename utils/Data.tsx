@@ -4,6 +4,8 @@ import { IoLogoGithub } from 'react-icons/io';
 
 // Types
 import {
+  EducationData,
+  ExperienceData,
   HobbiesIconProps,
   LanguageIconProps,
   LearningIconProps,
@@ -136,3 +138,53 @@ export const alsoData = {
   },
   // Add more sections here based on subcategories
 };
+
+export const experienceData = [
+  {
+    company: 'Deezer',
+    position: 'Frontend Engineer Intern',
+    duration: 'Mar 2023 - Sept 2023 · 7 months',
+    location: 'Paris, France',
+  },
+  {
+    company: 'Le Creuset',
+    position: 'Coach Manager',
+    duration: 'Jun 2017 - Mar 2020 · 2 years 10 months',
+    location: 'Paris, France',
+  },
+  {
+    company: 'Le Creuset',
+    position: 'Store Manager',
+    duration: 'Nov 2013 - Mar 2020 · 6 years 5 months',
+    location: 'Paris, France',
+  },
+  {
+    company: 'MARIAGE FRÈRES - Selfridges',
+    position: 'Assistant Manager',
+    duration: 'Sept 2012 - Jun 2013 · 10 months',
+    location: 'London, UK',
+  },
+];
+
+export const educationData = [
+  {
+    title: 'Professional Title in Web and Mobile Web Developer, level 5 (Bac +2)',
+    duration: 'Sept 2022 - Mar 2023',
+    school: "O'clock School",
+  },
+  {
+    title: 'Diploma of Practitioner in Naturopathy - Specialization in Coaching and Behavioral Psychology',
+    duration: 'Sept 2020 - Oct 2023',
+    school: 'Koréva Formation',
+  },
+  {
+    title: 'Diploma in Therapeutic Shiatsu (4th Year)',
+    duration: 'Sept 2019 - Sept 2023',
+    school: 'School of Therapeutic Shiatsu, Bernard Bouheret',
+  },
+  {
+    title: 'BTS - Management of Business Units',
+    duration: '2005 - 2006',
+    school: 'Guillaume Budé High School - Limeil-Brévannes',
+  },
+];
