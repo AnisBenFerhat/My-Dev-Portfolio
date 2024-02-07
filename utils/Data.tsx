@@ -9,6 +9,7 @@ import {
   HobbiesIconProps,
   LanguageIconProps,
   LearningIconProps,
+  MyWorkData,
   SocialIconProps,
   SoftSkillProps,
   TechIconProps,
@@ -186,5 +187,33 @@ export const educationData = [
     title: 'BTS - Management of Business Units',
     duration: '2005 - 2006',
     school: 'Guillaume Budé High School - Limeil-Brévannes',
+  },
+];
+
+// Work
+
+export const myWork: MyWorkData[] = [
+  {
+    id: 1,
+    title: 'My Portfolio',
+    description:
+      'My portfolio website showcasing my projects and skills. Built with React, Next.js, Tailwind CSS and more.',
+    github: 'https://github.com/AnisBenFerhat/My-Dev-Portfolio',
+    screenshot: '/assets/work/portfolio-screenshot.png',
+  },
+  {
+    id: 2,
+    title: 'Nike Landing Page',
+    description:
+      'A landing page for Nike built with React, TypeScript, Tailwind CSS, framer-motion, and react-hook-form.',
+    github: 'https://github.com/AnisBenFerhat/Nike-Clone',
+    screenshot: '/assets/work/nike-screenshot.png',
+  },
+  {
+    id: 3,
+    title: 'Netflix Clone',
+    description: 'A Netflix clone developed using React, TypeScript, and CSS Modules.',
+    github: 'https://github.com/AnisBenFerhat/Netflix-Clone',
+    screenshot: '/assets/work/netflix-screenshot.png',
   },
 ];

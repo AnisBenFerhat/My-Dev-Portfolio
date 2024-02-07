@@ -5,14 +5,13 @@ import AboutAccordion from './AboutAccordion';
 
 const About = () => {
   return (
-    <section id='about' className='scroll-mt-28 pb-12 py-6 xl:py-24'>
+    <section id='about' className='pb-12 py-6 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>
           <BiCode className='inline-block text-4xl mr-2' /> About me
         </h2>
 
-        <div className='border-b border-secondary-10/50 mb-8 max-w-screen-lg mx-auto px-4'>
-          {' '}
+        <div className='border-b border-secondary-10/50 mb-8 max-w-screen-md mx-auto px-4'>
           <p className='subtitle tracking-wide leading-[26px]'>
             Hey there, I'm Anis, a Paris-based frontend developer with a unique journey. I've spent over +15 years in
             retail, honing my skills in management, customer relations, and coaching. This diverse experience has

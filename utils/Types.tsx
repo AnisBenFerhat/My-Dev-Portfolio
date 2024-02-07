@@ -67,3 +67,13 @@ export interface EducationData {
   duration: string;
   school: string;
 }
+
+//  Work
+
+export interface MyWorkData {
+  id: number;
+  title: string;
+  description: string;
+  github: string;
+  screenshot: string;
+}
