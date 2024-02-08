@@ -1,5 +1,3 @@
-// AboutAccordion.tsx
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/Accordion';
 import { softSkills, techIcons, alsoData } from '@/utils/Data';
 import { SoftSkillProps } from '@/utils/Types';
@@ -72,7 +70,11 @@ const AboutAccordion = () => {
                       {Object.keys(alsoData.languages.icons[subcategory]).map((key) => (
                         <div key={key} className='flex items-center space-x-2'>
                           <img
-                            src={alsoData.languages.icons[subcategory][key]}
+                            src={
+                              alsoData.languages.icons[subcategory][
+                                key as keyof (typeof alsoData.languages.icons)[typeof subcategory]
+                              ]
+                            }
                             alt={key}
                             className='w-6 h-6 object-contain'
                           />
@@ -97,7 +99,11 @@ const AboutAccordion = () => {
                       {Object.keys(alsoData.learning.icons[subcategory]).map((key) => (
                         <div key={key} className='flex items-center space-x-2'>
                           <img
-                            src={alsoData.learning.icons[subcategory][key]}
+                            src={
+                              alsoData.learning.icons[subcategory][
+                                key as keyof (typeof alsoData.learning.icons)[typeof subcategory]
+                              ]
+                            }
                             alt={key}
                             className='w-6 h-6 object-contain'
                           />
@@ -122,7 +128,11 @@ const AboutAccordion = () => {
                       {Object.keys(alsoData.hobbies.icons[subcategory]).map((key) => (
                         <div key={key} className='flex items-center space-x-2'>
                           <img
-                            src={alsoData.hobbies.icons[subcategory][key]}
+                            src={
+                              alsoData.hobbies.icons[subcategory][
+                                key as keyof (typeof alsoData.hobbies.icons)[typeof subcategory]
+                              ]
+                            }
                             alt={key}
                             className='w-6 h-6 object-contain'
                           />

@@ -48,6 +48,7 @@ export interface LanguageIconProps {
   [key: string]: Record<string, string>;
 }
 
+// Learning Icon Props
 export interface LearningIconProps {
   'web development': Record<string, string>;
   other: Record<string, string>;
