@@ -37,6 +37,7 @@ export interface HobbiesIconProps {
   culinary: Record<string, string>;
   literature: Record<string, string>;
   creative: Record<string, string>;
+  [key: string]: Record<string, string>;
 }
 
 // Language Icon Props
@@ -44,12 +45,14 @@ export interface LanguageIconProps {
   bilingual: Record<string, string>;
   'basic understanding': Record<string, string>;
   learning: Record<string, string>;
+  [key: string]: Record<string, string>;
 }
 
 // Learning Icon Props
 export interface LearningIconProps {
   'web development': Record<string, string>;
   other: Record<string, string>;
+  [key: string]: Record<string, string>;
 }
 
 // Experience & Education
