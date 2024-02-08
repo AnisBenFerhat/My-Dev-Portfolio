@@ -28,10 +28,10 @@ const Work = () => {
                       href={item.github}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='flex items-center justify-center text-primary-500'
+                      className='flex items-center justify-center text-primary-500 hover:text-secondary-50 '
                     >
                       <IoLogoGithub className='mr-2' />
-                      Check the Repository
+                      Go to the Repository
                     </a>
                   </div>
                 </CardContent>
