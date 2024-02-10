@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/Accordion';
 import { softSkills, techIcons, alsoData } from '@/utils/Data';
-import { SoftSkillProps } from '@/utils/Types';
+import { SoftSkillProps, LanguageIconProps } from '@/utils/Types'; // Import LanguageIconProps
 
 const AboutAccordion = () => {
   const categories = Array.from(new Set(techIcons.map((icon) => icon.category)));
@@ -67,7 +67,7 @@ const AboutAccordion = () => {
                     <h4 className='mb-2 capitalize'>{subcategory}</h4>
                     <div className='grid grid-cols-6 gap-4'>
                       {/* Iterate over icons within subcategory */}
-                      {Object.keys(alsoData.languages.icons[subcategory]).map((key) => (
+                      {Object.keys(alsoData.languages.icons[subcategory]).map((key: keyof LanguageIconProps) => (
                         <div key={key} className='flex items-center space-x-2'>
                           <img
                             src={
@@ -75,65 +75,7 @@ const AboutAccordion = () => {
                                 key as keyof (typeof alsoData.languages.icons)[typeof subcategory]
                               ]
                             }
-                            alt={key}
-                            className='w-6 h-6 object-contain'
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Learning */}
-            <div className='mb-8'>
-              <h3 className='text-lg mb-2'>{alsoData.learning.title}</h3>
-              {/* Iterate over subcategories */}
-              <div className='grid xl:grid-cols-3 gap-4'>
-                {Object.keys(alsoData.learning.icons).map((subcategory) => (
-                  <div key={subcategory} className='mb-4'>
-                    <h4 className='mb-2 capitalize'>{subcategory}</h4>
-                    <div className='grid grid-cols-6 gap-4'>
-                      {/* Iterate over icons within subcategory */}
-                      {Object.keys(alsoData.learning.icons[subcategory]).map((key) => (
-                        <div key={key} className='flex items-center space-x-2'>
-                          <img
-                            src={
-                              alsoData.learning.icons[subcategory][
-                                key as keyof (typeof alsoData.learning.icons)[typeof subcategory]
-                              ]
-                            }
-                            alt={key}
-                            className='w-6 h-6 object-contain'
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Hobbies */}
-            <div className='mb-8'>
-              <h3 className='text-lg mb-2'>{alsoData.hobbies.title}</h3>
-              {/* Iterate over subcategories */}
-              <div className='grid xl:grid-cols-3 gap-4'>
-                {Object.keys(alsoData.hobbies.icons).map((subcategory) => (
-                  <div key={subcategory} className='mb-4'>
-                    <h4 className='mb-2 capitalize'>{subcategory}</h4>
-                    <div className='grid grid-cols-6 gap-4'>
-                      {/* Iterate over icons within subcategory */}
-                      {Object.keys(alsoData.hobbies.icons[subcategory]).map((key) => (
-                        <div key={key} className='flex items-center space-x-2'>
-                          <img
-                            src={
-                              alsoData.hobbies.icons[subcategory][
-                                key as keyof (typeof alsoData.hobbies.icons)[typeof subcategory]
-                              ]
-                            }
-                            alt={key}
+                            alt={key.toString()}
                             className='w-6 h-6 object-contain'
                           />
                         </div>
