@@ -1,14 +1,16 @@
 'use client';
 
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
 import { BiCode } from 'react-icons/bi';
 import { BsFillSendFill } from 'react-icons/bs';
 import { Button } from '@/components/ui/Button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
@@ -24,9 +26,11 @@ const Contact = () => {
     },
   });
 
+  const [isSending, setIsSending] = useState(false);
+  const [sentSuccessfully, setSentSuccessfully] = useState(false);
+
   const onSubmit = async (data: any) => {
-    // Handle form submission
-    console.log(data);
+    setIsSending(true);
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
@@ -38,11 +42,14 @@ const Contact = () => {
 
       if (response.ok) {
         console.log('Email sent successfully!');
+        setSentSuccessfully(true);
       } else {
         console.error('Failed to send email:', response.statusText);
       }
     } catch (error) {
       console.error('Error sending email:', error);
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -88,10 +95,11 @@ const Contact = () => {
                   </FormItem>
                 )}
               />
-              <Button type='submit' className='flex items-center justify-left gap-x-2'>
+              <Button type='submit' className='flex items-center justify-left gap-x-2' disabled={isSending}>
                 <BsFillSendFill />
                 Submit
               </Button>
+              {sentSuccessfully && <p className='text-green-500'>Message sent successfully!</p>}
             </form>
           </Form>
         </div>
