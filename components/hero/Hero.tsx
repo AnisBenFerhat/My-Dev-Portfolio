@@ -37,7 +37,7 @@ const Hero = () => {
               </Button>
               <div className='flex justify-center items-center '>
                 <Socials
-                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0'
+                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0 min-w-[300px]:mt-32 '
                   iconsStyles='text-secondary-60/90 text-[24px] hover:text-secondary-20 transition-all'
                 />
               </div>

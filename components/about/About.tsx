@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section id='about' className='pb-12 py-6 xl:py-24'>
       <div className='container mx-auto'>
-        <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>
+        <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto min-w-[300px]:mb-32 '>
           <BiCode className='inline-block text-4xl mr-2' /> About me
         </h2>
 
