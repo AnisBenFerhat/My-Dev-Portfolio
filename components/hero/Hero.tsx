@@ -37,14 +37,14 @@ const Hero = () => {
               </Button>
               <div className='flex justify-center items-center '>
                 <Socials
-                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0'
+                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0 min-w-[300px]:mt-32 '
                   iconsStyles='text-secondary-60/90 text-[24px] hover:text-secondary-20 transition-all'
                 />
               </div>
             </div>
           </div>
-          <div className='hidden md:flex absolute left-2/4 bottom-44 xl:bottom-20 animate-pulse xl:animate-bounce'>
-            <BsChevronCompactDown className='text-3xl text-secondary-80' />
+          <div className='hidden md:flex absolute left-2/4 bottom-44 xl:bottom-20 animate-pulse xl:animate-bounce '>
+            <BsChevronCompactDown className='text-3xl text-secondary-80 mb-24' />
           </div>
         </div>
       </div>

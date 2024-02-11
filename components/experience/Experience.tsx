@@ -7,7 +7,7 @@ const Experience = () => {
     <section id='experience' className='scroll-mt-28 pb-12 py-6 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>
-          <BiCode className='inline-block text-4xl mr-2' /> Experience and Education
+          <BiCode className='inline-block text-4xl mr-2' /> My Experience
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {/* Experience */}
