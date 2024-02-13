@@ -7,19 +7,19 @@ import { links } from '@/utils/Data';
 import { NavigationProps } from '@/utils/Types';
 import Socials from '../ui/Socials';
 
-const Footer = ({ containerStyles, linkStyles, underlineStyles }: NavigationProps) => {
+const Footer = () => {
   const path = usePathname();
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   return (
-    <footer className={`${containerStyles} bg-primary-30 py-12`}>
+    <footer className={`bg-primary-30 py-12`}>
       <div className='container mx-auto flex flex-col items-center justify-between'>
         {/* Navigation */}
-        <nav className='mb-6 flex gap-x-4'>
+        <nav className='mb-6 flex flex-wrap justify-center gap-x-4'>
           {links.map((link, index) => (
-            <Link href={link.path} key={index} className={`capitalize ${linkStyles}`}>
+            <Link href={link.path} key={index} className={`capitalize`}>
               <>
-                {link.path === path && <span className={`${underlineStyles}`} key={link.name} />}
+                {link.path === path && <span key={link.name} />}
                 {link.name.charAt(0).toUpperCase() + link.name.slice(1)}
               </>
             </Link>
