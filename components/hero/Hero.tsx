@@ -27,14 +27,16 @@ const Hero = () => {
               <p>Let's write code that not only works but inspires!</p>
             </div>
             <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
-              <Link href='/contact'>
+              <Link href='/#contact'>
                 <Button className='gap-x-2'>
                   Contact me <BsFillSendFill />
                 </Button>
               </Link>
-              <Button variant='outline' className='gap-x-2 '>
-                Download CV <RiDownloadFill size={18} color='#395591' />
-              </Button>
+              <a href='/assets/CV - Anis Ben Ferhat.pdf' download>
+                <Button variant='outline' className='gap-x-2 '>
+                  Download CV <RiDownloadFill size={18} color='#395591' />
+                </Button>
+              </a>
               <div className='flex justify-center items-center '>
                 <Socials
                   containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0 min-w-[300px]:mt-32 '
