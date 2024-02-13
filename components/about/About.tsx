@@ -5,7 +5,7 @@ import AboutAccordion from './AboutAccordion';
 
 const About = () => {
   return (
-    <section id='about' className='pb-12 py-6 xl:py-24 mt-28 sm:mt-36'>
+    <section id='about' className='pb-12 py-6 xl:py-24 mt-32 sm:mt-38'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto mt-24'>
           <BiCode className='inline-block text-4xl mr-2' /> About me
