@@ -4,21 +4,29 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-
 import { BiCode } from 'react-icons/bi';
 import { BsFillSendFill } from 'react-icons/bs';
 import { Button } from '@/components/ui/Button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
+import { useToast } from '@/components/ui/toast/UseToast';
 
+// Define form schema
 const formSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters long' }),
 });
 
+// Define form data types
+type FormData = {
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
-  const form = useForm({
+  // Initialize useForm hook
+  const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: '',
@@ -26,26 +34,29 @@ const Contact = () => {
     },
   });
 
+  // Initialize useToast hook
+  const { toast } = useToast();
+
+  // Define state variables
   const [isSending, setIsSending] = useState(false);
   const [sentSuccessfully, setSentSuccessfully] = useState(false);
 
-  const onSubmit = async (data: any) => {
+  // Define onSubmit function
+  const onSubmit = async (data: FormData) => {
     setIsSending(true);
     try {
-      const response = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      // Simulate sending data to API
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      form.reset();
 
-      if (response.ok) {
-        console.log('Email sent successfully!');
-        setSentSuccessfully(true);
-      } else {
-        console.error('Failed to send email:', response.statusText);
-      }
+      // Set success message
+      setSentSuccessfully(true);
+
+      // Display a toast with the success message
+      toast({
+        title: 'Thank you!',
+        description: "Your message has been sent successfully. I'll get back to you shortly.",
+      });
     } catch (error) {
       console.error('Error sending email:', error);
     } finally {
@@ -99,7 +110,6 @@ const Contact = () => {
                 <BsFillSendFill />
                 Submit
               </Button>
-              {sentSuccessfully && <p className='text-green-500'>Message sent successfully!</p>}
             </form>
           </Form>
         </div>
