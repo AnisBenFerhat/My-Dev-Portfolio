@@ -67,15 +67,61 @@ const AboutAccordion = () => {
                     <h4 className='mb-2 capitalize'>{subcategory}</h4>
                     <div className='grid grid-cols-6 gap-4'>
                       {/* Iterate over icons within subcategory */}
-                      {Object.keys(alsoData.languages.icons[subcategory]).map((key: keyof LanguageIconProps) => (
+                      {Object.keys(alsoData.languages.icons[subcategory]).map((key) => (
                         <div key={key} className='flex items-center space-x-2'>
                           <img
-                            src={
-                              alsoData.languages.icons[subcategory][
-                                key as keyof (typeof alsoData.languages.icons)[typeof subcategory]
-                              ]
-                            }
-                            alt={key.toString()}
+                            src={alsoData.languages.icons[subcategory][key]}
+                            alt={key}
+                            className='w-6 h-6 object-contain'
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Learning */}
+            <div className='mb-8'>
+              <h3 className='text-lg mb-2'>{alsoData.learning.title}</h3>
+              {/* Iterate over subcategories */}
+              <div className='grid xl:grid-cols-3 gap-4'>
+                {Object.keys(alsoData.learning.icons).map((subcategory) => (
+                  <div key={subcategory} className='mb-4'>
+                    <h4 className='mb-2 capitalize'>{subcategory}</h4>
+                    <div className='grid grid-cols-6 gap-4'>
+                      {/* Iterate over icons within subcategory */}
+                      {Object.keys(alsoData.learning.icons[subcategory]).map((key) => (
+                        <div key={key} className='flex items-center space-x-2'>
+                          <img
+                            src={alsoData.learning.icons[subcategory][key]}
+                            alt={key}
+                            className='w-6 h-6 object-contain'
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Hobbies */}
+            <div className='mb-8'>
+              <h3 className='text-lg mb-2'>{alsoData.hobbies.title}</h3>
+              {/* Iterate over subcategories */}
+              <div className='grid xl:grid-cols-3 gap-4'>
+                {Object.keys(alsoData.hobbies.icons).map((subcategory) => (
+                  <div key={subcategory} className='mb-4'>
+                    <h4 className='mb-2 capitalize'>{subcategory}</h4>
+                    <div className='grid grid-cols-6 gap-4'>
+                      {/* Iterate over icons within subcategory */}
+                      {Object.keys(alsoData.hobbies.icons[subcategory]).map((key) => (
+                        <div key={key} className='flex items-center space-x-2'>
+                          <img
+                            src={alsoData.hobbies.icons[subcategory][key]}
+                            alt={key}
                             className='w-6 h-6 object-contain'
                           />
                         </div>
