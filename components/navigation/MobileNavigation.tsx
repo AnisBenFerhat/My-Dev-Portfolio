@@ -1,10 +1,6 @@
 import { useState } from 'react';
-
-// Component - UI
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/Sheet'; // Import SheetClose
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
 import { AlignJustify } from 'lucide-react';
-
-// Components
 import Navigation from './Navigation';
 import Logo from '../ui/Logo';
 import Socials from '../ui/Socials';
@@ -18,12 +14,13 @@ const MobileNavigation = () => {
         <AlignJustify className='cursor-pointer' />
       </SheetTrigger>
       <SheetContent>
-        <div className='flex flex-col items-center justify-around h-full py-8'>
-          <div className='flex flex-col items-center gap-y-36'>
+        <div className='flex flex-col items-center justify-between h-full py-8'>
+          <div className='flex flex-col items-center'>
             <Logo />
             <Navigation
-              containerStyles='flex flex-col items-center gap-y-6'
+              containerStyles='flex flex-col items-center gap-y-4 py-8'
               linkStyles='text-xl'
+              underlineStyles='absolute left-0 top-full h-[2px] w-full bg-secondary-60'
               setOpen={setSheetOpen}
             />
           </div>
