@@ -3,6 +3,7 @@ export interface NavigationProps {
   containerStyles: string;
   linkStyles: string;
   underlineStyles?: string;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Socials
