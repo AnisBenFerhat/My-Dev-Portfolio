@@ -26,7 +26,7 @@ const Hero = () => {
               <p>I bring expertise in TypeScript, React, and NextJS.</p>
               <p>Let's write code that not only works but inspires!</p>
             </div>
-            <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
+            <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 mt-4 md:mt-0  '>
               <Link href='/#contact'>
                 <Button className='gap-x-2'>
                   Contact me <BsFillSendFill />
@@ -39,7 +39,7 @@ const Hero = () => {
               </a>
               <div className='flex justify-center items-center '>
                 <Socials
-                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0 min-w-[300px]:mt-32 '
+                  containerStyles='flex gap-x-4 mx-auto xl:mx-0 xl:mt-0 min-w-[300px]:mt-32 mt-10 md:mt-0'
                   iconsStyles='text-secondary-60/90 text-[24px] hover:text-secondary-20 transition-all'
                 />
               </div>
