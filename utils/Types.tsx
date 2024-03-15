@@ -78,6 +78,7 @@ export interface MyWorkData {
   id: number;
   title: string;
   description: string;
-  github: string;
+  github?: string;
+  website?: string;
   screenshot: string;
 }

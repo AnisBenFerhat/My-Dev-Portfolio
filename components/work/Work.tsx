@@ -2,11 +2,12 @@ import Image from 'next/image';
 import { BiCode } from 'react-icons/bi';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
 import { IoLogoGithub } from 'react-icons/io';
-import { myWork } from '@/utils/Data'; // Importing myWork data
+import { MdWeb } from 'react-icons/md';
+import { myWork } from '@/utils/Data';
 
 const Work = () => {
   return (
-    <section id='work' className='scroll-mt-28 pb-12 py-6 xl:py-24'>
+    <section id='work' className='scroll-mt-12 pb-12 py-6 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>
           <BiCode className='inline-block text-4xl mr-2' /> My Work
@@ -24,15 +25,28 @@ const Work = () => {
                 <CardContent className='px-4'>
                   <CardDescription className='mb-4'>{item.description}</CardDescription>
                   <div>
-                    <a
-                      href={item.github}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='flex items-center justify-center text-primary-500 hover:text-secondary-50 '
-                    >
-                      <IoLogoGithub className='mr-2' />
-                      Go to the Repository
-                    </a>
+                    {item.github ? (
+                      <a
+                        href={item.github}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center justify-center text-primary-500 hover:text-secondary-50 '
+                      >
+                        <IoLogoGithub className='mr-2' />
+                        Go to the Repository
+                      </a>
+                    ) : item.website ? (
+                      <a
+                        href={item.website}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center justify-center text-primary-500 hover:text-secondary-50 '
+                      >
+                        <MdWeb className='mr-2' /> {}
+                        Go to the Website
+                      </a>
+                    ) : null}{' '}
+                    {}
                   </div>
                 </CardContent>
               </Card>

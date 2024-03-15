@@ -216,4 +216,12 @@ export const myWork: MyWorkData[] = [
     github: 'https://github.com/AnisBenFerhat/Netflix-Clone',
     screenshot: '/assets/work/netflix-screenshot.png',
   },
+  {
+    id: 4,
+    title: 'Deezer - La Relève 2023',
+    description:
+      "Landing page featuring Deezer's 4th edition, highlighting the creation of a unique mixtape by 12 emerging artists in an exclusive docu-series.",
+    website: 'https://www.deezer.com/explore/fr/moments/lareleve2023',
+    screenshot: '/assets/work/la-releve-2023.png',
+  },
 ];
